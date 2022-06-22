@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Application.Migrations
 {
     [DbContext(typeof(StoreDbContext))]
-    [Migration("20220621164505_InitialCreate")]
+    [Migration("20220622150451_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -48,7 +48,8 @@ namespace Application.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("PictureUrl")
                         .IsRequired()

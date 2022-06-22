@@ -1,19 +1,31 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Infrastructure;
+using Microsoft.EntityFrameworkCore;
 
 namespace Application
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            var host = CreateHostBuilder(args).Build();
+
+            // any code inside using will be disposed after all the methods ran 
+            using (var scope = host.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                var loggerFactory = services.GetRequiredService<ILoggerFactory>();
+                try
+                {
+                    var context = services.GetRequiredService<StoreDbContext>();
+                    await context.Database.MigrateAsync();
+                }
+                catch (Exception ex)
+                {
+                    var logger = loggerFactory.CreateLogger<Program>();
+                    logger.LogError(ex, "An error occured during migration");
+                }
+            }
+            host.Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
