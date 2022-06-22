@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "ECommerce2": {
+    "ECommerce": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
