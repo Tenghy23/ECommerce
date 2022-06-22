@@ -1,26 +1,50 @@
 [
   {
     "Id": 1,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "Angular"
   },
   {
     "Id": 2,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "NetCore"
   },
   {
     "Id": 3,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "VS Code"
   },
   {
     "Id": 4,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "React"
   },
   {
     "Id": 5,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "Typescript"
   },
   {
     "Id": 6,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "Redis"
   }
 ]

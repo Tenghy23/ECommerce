@@ -1,5 +1,10 @@
 [
   {
+    "Id": 1,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "Angular Speedster Board 2000",
     "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     "Price": 200,
@@ -8,6 +13,11 @@
     "ProductBrandId": 1
   },
   {
+    "Id": 2,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "Green Angular Board 3000",
     "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
     "Price": 150,
@@ -16,6 +26,11 @@
     "ProductBrandId": 1
   },
   {
+    "Id": 3,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "Core Board Speed Rush 3",
     "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
     "Price": 180,
@@ -24,6 +39,11 @@
     "ProductBrandId": 2
   },
   {
+    "Id": 4,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "Net Core Super Board",
     "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     "Price": 300,
@@ -32,6 +52,11 @@
     "ProductBrandId": 2
   },
   {
+    "Id": 5,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "React Board Super Whizzy Fast",
     "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     "Price": 250,
@@ -40,6 +65,11 @@
     "ProductBrandId": 4
   },
   {
+    "Id": 6,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "Typescript Entry Board",
     "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
     "Price": 120,
@@ -48,6 +78,11 @@
     "ProductBrandId": 5
   },
   {
+    "Id": 7,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "Core Blue Hat",
     "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     "Price": 10,
@@ -56,6 +91,11 @@
     "ProductBrandId": 2
   },
   {
+    "Id": 8,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "Green React Woolen Hat",
     "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
     "Price": 8,
@@ -64,6 +104,11 @@
     "ProductBrandId": 4
   },
   {
+    "Id": 9,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "Purple React Woolen Hat",
     "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     "Price": 15,
@@ -72,6 +117,11 @@
     "ProductBrandId": 4
   },
   {
+    "Id": 10,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "Blue Code Gloves",
     "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
     "Price": 18,
@@ -80,6 +130,11 @@
     "ProductBrandId": 3
   },
   {
+    "Id": 11,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "Green Code Gloves",
     "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     "Price": 15,
@@ -88,6 +143,11 @@
     "ProductBrandId": 3
   },
   {
+    "Id": 12,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "Purple React Gloves",
     "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.",
     "Price": 16,
@@ -96,6 +156,11 @@
     "ProductBrandId": 4
   },
   {
+    "Id": 13,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "Green React Gloves",
     "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     "Price": 14,
@@ -104,6 +169,11 @@
     "ProductBrandId": 4
   },
   {
+    "Id": 14,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "Redis Red Boots",
     "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
     "Price": 250,
@@ -112,6 +182,11 @@
     "ProductBrandId": 6
   },
   {
+    "Id": 15,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "Core Red Boots",
     "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     "Price": 189.99,
@@ -120,6 +195,11 @@
     "ProductBrandId": 2
   },
   {
+    "Id": 16,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "Core Purple Boots",
     "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     "Price": 199.99,
@@ -128,6 +208,11 @@
     "ProductBrandId": 2
   },
   {
+    "Id": 17,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "Angular Purple Boots",
     "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
     "Price": 150,
@@ -136,6 +221,11 @@
     "ProductBrandId": 1
   },
   {
+    "Id": 18,
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "30:47.0",
+    "DateTimeUpdated": "30:47.0",
     "Name": "Angular Blue Boots",
     "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
     "Price": 180,

@@ -6,12 +6,20 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    public class BaseEntity
+    public abstract class BaseEntity
     {
-        public int Id { get; set; }
-        public string CreatedBy { get; set; }
-        public string UpdatedBy { get; set; }
-        public DateTimeOffset DateTimeCreated { get; set; }
-        public DateTimeOffset DateTimeUpdated { get; set; }
+        public int Id { get; protected set; }
+        public string CreatedBy { get; protected set; }
+        public string UpdatedBy { get; protected set; }
+        public DateTimeOffset DateTimeCreated { get; protected set; }
+        public DateTimeOffset DateTimeUpdated { get; protected set; }
+
+        protected BaseEntity()
+        {
+            DateTimeCreated = DateTimeOffset.Now;
+            DateTimeUpdated = DateTimeCreated;
+            CreatedBy = "SYSTEM";
+            UpdatedBy = CreatedBy;
+        }
     }
 }

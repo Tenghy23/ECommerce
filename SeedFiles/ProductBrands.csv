@@ -1,7 +1,7 @@
-﻿Id,Name
-1,Angular
-2,NetCore
-3,VS Code
-4,React
-5,Typescript
-6,Redis
+﻿Id,CreatedBy,UpdatedBy,DateTimeCreated,DateTimeUpdated,Name
+1,SYSTEM,SYSTEM,30:47.0,30:47.0,Angular
+2,SYSTEM,SYSTEM,30:47.0,30:47.0,NetCore
+3,SYSTEM,SYSTEM,30:47.0,30:47.0,VS Code
+4,SYSTEM,SYSTEM,30:47.0,30:47.0,React
+5,SYSTEM,SYSTEM,30:47.0,30:47.0,Typescript
+6,SYSTEM,SYSTEM,30:47.0,30:47.0,Redis
