@@ -12,18 +12,6 @@ namespace Infrastructure
         {
             try
             {
-                if (!context.Products.Any())
-                {
-                    var productsData = File.ReadAllText("../Infrastructure/SeedData/products.json");
-                    var products = JsonSerializer.Deserialize<List<Product>>(productsData);
-                    foreach (var item in products!)
-                        context.Products.Add(item);
-
-                    //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT ProductTypes ON");
-                    await context.SaveChangesAsync();
-                    //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT ProductTypes OFF");
-                }
-
                 if (!context.ProductBrands.Any())
                 {
                     var brandsData = File.ReadAllText("../Infrastructure/SeedData/brands.json");
@@ -35,7 +23,6 @@ namespace Infrastructure
                     await context.SaveChangesAsync();
                     //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT ProductBrands OFF");
                 }
-
                 if (!context.ProductTypes.Any())
                 {
                     var typesData = File.ReadAllText("../Infrastructure/SeedData/types.json");
@@ -46,6 +33,17 @@ namespace Infrastructure
                     //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Products ON");
                     await context.SaveChangesAsync();
                     //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Products OFF");
+                }
+                if (!context.Products.Any())
+                {
+                    var productsData = File.ReadAllText("../Infrastructure/SeedData/products.json");
+                    var products = JsonSerializer.Deserialize<List<Product>>(productsData);
+                    foreach (var item in products!)
+                        context.Products.Add(item);
+
+                    //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT ProductTypes ON");
+                    await context.SaveChangesAsync();
+                    //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT ProductTypes OFF");
                 }
             } 
             catch (Exception ex)

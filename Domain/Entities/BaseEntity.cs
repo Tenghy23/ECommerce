@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Constants;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,5 +15,13 @@ namespace Domain.Entities
         public DateTimeOffset DateTimeCreated { get; protected set; }
         public DateTimeOffset DateTimeUpdated { get; protected set; }
 
+        //protected BaseEntity()
+        //{
+        //    Id = Guid.NewGuid();
+        //    CreatedBy = StringConstants.SYSTEM;
+        //    UpdatedBy = StringConstants.SYSTEM;
+        //    DateTimeCreated = DateTimeOffset.Now;
+        //    DateTimeUpdated = DateTimeOffset.Now;
+        //}
     }
 }

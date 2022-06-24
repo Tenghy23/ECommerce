@@ -1,7 +1,7 @@
 ﻿namespace Domain.Constants
 {
-    public class Constant
+    public static class StringConstants
     {
-
+        public static readonly string SYSTEM = "SYSTEM";
     }
 }

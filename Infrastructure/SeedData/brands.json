@@ -5,7 +5,6 @@
     "UpdatedBy": "SYSTEM",
     "DateTimeCreated": "2022-06-24 16:42:18.8449827 +08:00",
     "DateTimeUpdated": "2022-06-24 16:42:18.8449827 +08:00",
-    "ProductBrandId":  "1",
     "Name": "Angular"
   },
   {
@@ -14,7 +13,6 @@
     "UpdatedBy": "SYSTEM",
     "DateTimeCreated": "2022-06-24 16:42:18.8449827 +08:00",
     "DateTimeUpdated": "2022-06-24 16:42:18.8449827 +08:00",
-    "ProductBrandId": "2",
     "Name": "NetCore"
   },
   {
@@ -23,7 +21,6 @@
     "UpdatedBy": "SYSTEM",
     "DateTimeCreated": "2022-06-24 16:42:18.8449827 +08:00",
     "DateTimeUpdated": "2022-06-24 16:42:18.8449827 +08:00",
-    "ProductBrandId": "3",
     "Name": "VS Code"
   },
   {
@@ -32,7 +29,6 @@
     "UpdatedBy": "SYSTEM",
     "DateTimeCreated": "2022-06-24 16:42:18.8449827 +08:00",
     "DateTimeUpdated": "2022-06-24 16:42:18.8449827 +08:00",
-    "ProductBrandId": "4",
     "Name": "React"
   },
   {
@@ -41,7 +37,6 @@
     "UpdatedBy": "SYSTEM",
     "DateTimeCreated": "2022-06-24 16:42:18.8449827 +08:00",
     "DateTimeUpdated": "2022-06-24 16:42:18.8449827 +08:00",
-    "ProductBrandId": "5",
     "Name": "Typescript"
   },
   {
@@ -50,7 +45,6 @@
     "UpdatedBy": "SYSTEM",
     "DateTimeCreated": "2022-06-24 16:42:18.8449827 +08:00",
     "DateTimeUpdated": "2022-06-24 16:42:18.8449827 +08:00",
-    "ProductBrandId": "6",
     "Name": "Redis"
   }
 ]
