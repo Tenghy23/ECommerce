@@ -1,50 +1,56 @@
 [
   {
-    "Id": 1,
+    "Id": "47B537B5-03C1-47FA-A526-8EDB81EC9FFB",
     "CreatedBy": "SYSTEM",
     "UpdatedBy": "SYSTEM",
-    "DateTimeCreated": "30:47.0",
-    "DateTimeUpdated": "30:47.0",
+    "DateTimeCreated": "2022-06-24 16:42:18.8449827 +08:00",
+    "DateTimeUpdated": "2022-06-24 16:42:18.8449827 +08:00",
+    "ProductBrandId":  "1",
     "Name": "Angular"
   },
   {
-    "Id": 2,
+    "Id": "ACFB7130-DF6B-4A2F-B1AB-ED40920694CF",
     "CreatedBy": "SYSTEM",
     "UpdatedBy": "SYSTEM",
-    "DateTimeCreated": "30:47.0",
-    "DateTimeUpdated": "30:47.0",
+    "DateTimeCreated": "2022-06-24 16:42:18.8449827 +08:00",
+    "DateTimeUpdated": "2022-06-24 16:42:18.8449827 +08:00",
+    "ProductBrandId": "2",
     "Name": "NetCore"
   },
   {
-    "Id": 3,
+    "Id": "B42329B3-99F3-4164-ABA7-61364C58AD03",
     "CreatedBy": "SYSTEM",
     "UpdatedBy": "SYSTEM",
-    "DateTimeCreated": "30:47.0",
-    "DateTimeUpdated": "30:47.0",
+    "DateTimeCreated": "2022-06-24 16:42:18.8449827 +08:00",
+    "DateTimeUpdated": "2022-06-24 16:42:18.8449827 +08:00",
+    "ProductBrandId": "3",
     "Name": "VS Code"
   },
   {
-    "Id": 4,
+    "Id": "1744944F-C277-4AB8-B6ED-36BBB5CDC27B",
     "CreatedBy": "SYSTEM",
     "UpdatedBy": "SYSTEM",
-    "DateTimeCreated": "30:47.0",
-    "DateTimeUpdated": "30:47.0",
+    "DateTimeCreated": "2022-06-24 16:42:18.8449827 +08:00",
+    "DateTimeUpdated": "2022-06-24 16:42:18.8449827 +08:00",
+    "ProductBrandId": "4",
     "Name": "React"
   },
   {
-    "Id": 5,
+    "Id": "F027AD40-0043-4363-88D5-6D80C3166C08",
     "CreatedBy": "SYSTEM",
     "UpdatedBy": "SYSTEM",
-    "DateTimeCreated": "30:47.0",
-    "DateTimeUpdated": "30:47.0",
+    "DateTimeCreated": "2022-06-24 16:42:18.8449827 +08:00",
+    "DateTimeUpdated": "2022-06-24 16:42:18.8449827 +08:00",
+    "ProductBrandId": "5",
     "Name": "Typescript"
   },
   {
-    "Id": 6,
+    "Id": "055944E7-46A2-49A4-96C7-7ED15816A05D",
     "CreatedBy": "SYSTEM",
     "UpdatedBy": "SYSTEM",
-    "DateTimeCreated": "30:47.0",
-    "DateTimeUpdated": "30:47.0",
+    "DateTimeCreated": "2022-06-24 16:42:18.8449827 +08:00",
+    "DateTimeUpdated": "2022-06-24 16:42:18.8449827 +08:00",
+    "ProductBrandId": "6",
     "Name": "Redis"
   }
 ]

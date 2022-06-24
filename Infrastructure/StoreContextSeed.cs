@@ -19,9 +19,9 @@ namespace Infrastructure
                     foreach (var item in products!)
                         context.Products.Add(item);
 
-                    context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT ProductTypes ON");
+                    //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT ProductTypes ON");
                     await context.SaveChangesAsync();
-                    context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT ProductTypes OFF");
+                    //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT ProductTypes OFF");
                 }
 
                 if (!context.ProductBrands.Any())
@@ -31,9 +31,9 @@ namespace Infrastructure
                     foreach (var item in brands!)
                         context.ProductBrands.Add(item);
 
-                    context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT ProductBrands ON");
+                    //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT ProductBrands ON");
                     await context.SaveChangesAsync();
-                    context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT ProductBrands OFF");
+                    //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT ProductBrands OFF");
                 }
 
                 if (!context.ProductTypes.Any())
@@ -43,9 +43,9 @@ namespace Infrastructure
                     foreach (var item in types!)
                         context.ProductTypes.Add(item);
 
-                    context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Products ON");
+                    //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Products ON");
                     await context.SaveChangesAsync();
-                    context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Products OFF");
+                    //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Products OFF");
                 }
             } 
             catch (Exception ex)
