@@ -27,24 +27,54 @@ namespace Application.Controllers
                 var products = await _productRepository.GetProductsAsync();
                 return Ok(products);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine($"Exception of type: {e}");
+                Console.WriteLine($"Exception of type: {ex}");
                 throw new Exception();
             }
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<string>> GetProduct(int id)
+        public async Task<ActionResult<string>> GetProduct(Guid id)
         {
             try
             {
                 var products = await _productRepository.GetProductByIdAsync(id);
                 return Ok(products);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine($"Exception of type: {e}");
+                Console.WriteLine($"Exception of type: {ex}");
+                throw new Exception();
+            }
+        }
+
+        [HttpGet("brands")]
+        public async Task<ActionResult<IReadOnlyList<ProductBrand>>> GetProductBrands()
+        {
+            try
+            {
+                var products = await _productRepository.GetProductBrandsAsync();
+                return Ok(products);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception of type: {ex}");
+                throw new Exception();
+            }
+        }
+
+        [HttpGet("types")]
+        public async Task<ActionResult<IReadOnlyList<ProductBrand>>> GetProductTypes()
+        {
+            try
+            {
+                var products = await _productRepository.GetProductTypesAsync();
+                return Ok(products);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception of type: {ex}");
                 throw new Exception();
             }
         }
