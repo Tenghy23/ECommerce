@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "465E708B-D880-41FA-9CFD-127AF18BA615",
+    "Name": "Hats",
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "2022-06-24T16:42:18.8449827+08:00",
+    "DateTimeUpdated": "2022-06-24T16:42:18.8449827+08:00"
+  },
+  {
+    "Id": "10053820-3E91-4069-9EA6-9C560C1EDD85",
+    "Name": "Gloves",
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "2022-06-24T16:42:18.8449827+08:00",
+    "DateTimeUpdated": "2022-06-24T16:42:18.8449827+08:00"
+  },
+  {
+    "Id": "8614F3DE-896D-45EA-B68B-B4661BA4A883",
+    "Name": "Boards",
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "2022-06-24T16:42:18.8449827+08:00",
+    "DateTimeUpdated": "2022-06-24T16:42:18.8449827+08:00"
+  },
+  {
+    "Id": "F4165AD3-660A-4B36-BFD7-BD51B3B75D15",
+    "Name": "Boots",
+    "CreatedBy": "SYSTEM",
+    "UpdatedBy": "SYSTEM",
+    "DateTimeCreated": "2022-06-24T16:42:18.8449827+08:00",
+    "DateTimeUpdated": "2022-06-24T16:42:18.8449827+08:00"
+  }
+]

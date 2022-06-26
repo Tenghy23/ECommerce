@@ -33,23 +33,16 @@ namespace Application.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<ProductToReturnDto>>> GetProducts()
+        public async Task<ActionResult<IReadOnlyList<ProductToReturnDto>>> GetProducts()
         {
             try
             {
                 var spec = new ProductsWithTypesAndBrandsSpecification();
                 var products = await _productRepo.ListAsync(spec);
-                products.Select(p => new ProductToReturnDto
-                {
-                    Id = p.Id,
-                    Name = p.Name,
-                    Description = p.Description,
-                    PictureUrl = p.PictureUrl,
-                    Price = p.Price,
-                    ProductBrand = p.ProductBrand.Name,
-                    ProductType = p.ProductType.Name
-                }).ToList();
-                return Ok(products);
+
+                var mappedProducts = _mapper
+                    .Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(products);
+                return Ok(mappedProducts);
             }
             catch (Exception ex)
             {
@@ -65,6 +58,7 @@ namespace Application.Controllers
             {
                 var spec = new ProductsWithTypesAndBrandsSpecification(id);
                 var product = await _productRepo.GetEntityWithSpec(spec);
+                
                 var productToReturnDto = _mapper.Map<Product, ProductToReturnDto>(product);
                 return Ok(productToReturnDto);
             }

@@ -57,6 +57,8 @@ namespace Application
 
             app.UseRouting();
 
+            app.UseStaticFiles();
+
             app.UseAuthorization();
 
             app.UseCors(cors =>
