@@ -9,19 +9,10 @@ namespace Domain.Entities
 {
     public abstract class BaseEntity
     {
-        public Guid Id { get; protected set; }
-        public string CreatedBy { get; protected set; }
-        public string UpdatedBy { get; protected set; }
-        public DateTimeOffset DateTimeCreated { get; protected set; }
-        public DateTimeOffset DateTimeUpdated { get; protected set; }
-
-        //protected BaseEntity()
-        //{
-        //    Id = Guid.NewGuid();
-        //    CreatedBy = StringConstants.SYSTEM;
-        //    UpdatedBy = StringConstants.SYSTEM;
-        //    DateTimeCreated = DateTimeOffset.Now;
-        //    DateTimeUpdated = DateTimeOffset.Now;
-        //}
+        public Guid Id { get; set; }
+        public string CreatedBy { get; set; }
+        public string UpdatedBy { get; set; }
+        public DateTimeOffset DateTimeCreated { get; set; }
+        public DateTimeOffset DateTimeUpdated { get; set; }
     }
 }

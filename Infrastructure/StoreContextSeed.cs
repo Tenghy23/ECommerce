@@ -41,7 +41,7 @@ namespace Infrastructure
                     foreach (var item in products!)
                         context.Products.Add(item);
 
-                    //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT ProductTypes ON");
+                   //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT ProductTypes ON");
                     await context.SaveChangesAsync();
                     //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT ProductTypes OFF");
                 }

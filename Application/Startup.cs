@@ -1,6 +1,7 @@
 ﻿using Domain.Interfaces;
 using Infrastructure;
 using Infrastructure.Data;
+using Infrastructure.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -32,6 +33,7 @@ namespace Application
 
             #region Repository Services
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             #endregion
         }
 

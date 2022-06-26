@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces;
+using Domain.Specifications;
 using Infrastructure;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
@@ -11,12 +12,18 @@ namespace Application.Controllers
     [Route("api/[controller]")]
     public class ProductsController : Controller
     {
-        private readonly StoreDbContext _context;
-        private readonly IProductRepository _productRepository;
+        public IGenericRepository<Product> _productRepo { get; }
+        public IGenericRepository<ProductBrand> _productBrandRepo { get; }
+        public IGenericRepository<ProductType> _productTypeRepo { get; }
 
-        public ProductsController(IProductRepository productRepository)
+        public ProductsController(
+            IGenericRepository<Product> productRepo,
+            IGenericRepository<ProductBrand> productBrandRepo,
+            IGenericRepository<ProductType> productTypeRepo)
         {
-            _productRepository = productRepository;
+            _productRepo = productRepo;
+            _productBrandRepo = productBrandRepo;
+            _productTypeRepo = productTypeRepo;
         }
 
         [HttpGet]
@@ -24,7 +31,8 @@ namespace Application.Controllers
         {
             try
             {
-                var products = await _productRepository.GetProductsAsync();
+                var spec = new ProductsWithTypesAndBrandsSpecification();
+                var products = await _productRepo.ListAsync(spec);
                 return Ok(products);
             }
             catch (Exception ex)
@@ -39,7 +47,8 @@ namespace Application.Controllers
         {
             try
             {
-                var products = await _productRepository.GetProductByIdAsync(id);
+                var spec = new ProductsWithTypesAndBrandsSpecification(id);
+                var products = await _productRepo.GetEntityWithSpec(spec);
                 return Ok(products);
             }
             catch (Exception ex)
@@ -54,7 +63,7 @@ namespace Application.Controllers
         {
             try
             {
-                var products = await _productRepository.GetProductBrandsAsync();
+                var products = await _productBrandRepo.ListAllAsync();
                 return Ok(products);
             }
             catch (Exception ex)
@@ -65,11 +74,11 @@ namespace Application.Controllers
         }
 
         [HttpGet("types")]
-        public async Task<ActionResult<IReadOnlyList<ProductBrand>>> GetProductTypes()
+        public async Task<ActionResult<IReadOnlyList<ProductType>>> GetProductTypes()
         {
             try
             {
-                var products = await _productRepository.GetProductTypesAsync();
+                var products = await _productTypeRepo.ListAllAsync();
                 return Ok(products);
             }
             catch (Exception ex)

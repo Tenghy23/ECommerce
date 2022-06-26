@@ -14,8 +14,7 @@ namespace Infrastructure
         public DbSet<ProductBrand> ProductBrands { get; set; }
         public DbSet<ProductType> ProductTypes { get; set; }
 
-        /* this overrides the original dbContext method for entityConfiguration
-            use it as how is shown below */ 
+        // this overrides the original dbContext method for entityConfiguration
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
