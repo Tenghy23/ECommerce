@@ -54,9 +54,16 @@ namespace Application
 
             app.UseAuthorization();
 
+            app.UseCors(cors =>
+            {
+                cors.AllowAnyHeader();
+                cors.AllowAnyOrigin();
+            });
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+
             });
         }
     }
