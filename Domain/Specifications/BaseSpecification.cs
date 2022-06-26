@@ -32,3 +32,6 @@ namespace Domain.Specifications
         }
     }
 }
+
+/* Expression<Func<T, Object>> is an Expression which consist of a func
+ * which takes in a object & returns a generic type */

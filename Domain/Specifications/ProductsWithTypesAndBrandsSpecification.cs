@@ -23,3 +23,6 @@ namespace Domain.Specifications
         }
     }
 }
+
+/* the classes here will return a query with the actual expressions meant
+ * to execute at the database side */

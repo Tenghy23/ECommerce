@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Application.DTOs;
+using Domain.Entities;
 using Domain.Interfaces;
 using Domain.Specifications;
 using Infrastructure;
@@ -27,12 +28,22 @@ namespace Application.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Product>>> GetProducts()
+        public async Task<ActionResult<List<ProductToReturnDto>>> GetProducts()
         {
             try
             {
                 var spec = new ProductsWithTypesAndBrandsSpecification();
                 var products = await _productRepo.ListAsync(spec);
+                products.Select(p => new ProductToReturnDto
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                    Description = p.Description,
+                    PictureUrl = p.PictureUrl,
+                    Price = p.Price,
+                    ProductBrand = p.ProductBrand.Name,
+                    ProductType = p.ProductType.Name
+                }).ToList();
                 return Ok(products);
             }
             catch (Exception ex)
@@ -43,13 +54,23 @@ namespace Application.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<string>> GetProduct(Guid id)
+        public async Task<ActionResult<ProductToReturnDto>> GetProduct(Guid id)
         {
             try
             {
                 var spec = new ProductsWithTypesAndBrandsSpecification(id);
                 var products = await _productRepo.GetEntityWithSpec(spec);
-                return Ok(products);
+                ProductToReturnDto productToReturnDto = new ProductToReturnDto
+                {
+                    Id = products.Id,
+                    Name = products.Name,
+                    Description = products.Description,
+                    PictureUrl = products.PictureUrl,
+                    Price = products.Price,
+                    ProductBrand = products.ProductBrand.Name,
+                    ProductType = products.ProductType.Name
+                };
+                return Ok(productToReturnDto);
             }
             catch (Exception ex)
             {

@@ -42,6 +42,8 @@ namespace Infrastructure.Repository
 
         private IQueryable<T> ApplySpecification(ISpecification<T> spec)
         {
+            // .GetQuery()'s job is to return us a IQueryable
+            // _context.Set<T>() refers to DbSet
             return SpecificationEvaluator<T>.GetQuery(_context.Set<T>().AsQueryable(), spec);
         }
     }
