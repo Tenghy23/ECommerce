@@ -1,4 +1,5 @@
-﻿using Domain.Interfaces;
+﻿using Application.Helpers;
+using Domain.Interfaces;
 using Infrastructure;
 using Infrastructure.Data;
 using Infrastructure.Repository;
@@ -30,6 +31,10 @@ namespace Application
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPIv5", Version = "v1" });
 
             });
+
+            #region AutoMapper
+            services.AddAutoMapper(typeof(MappingProfiles));
+            #endregion
 
             #region Repository Services
             services.AddScoped<IProductRepository, ProductRepository>();

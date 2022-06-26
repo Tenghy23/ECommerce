@@ -1,4 +1,5 @@
 ﻿using Application.DTOs;
+using AutoMapper;
 using Domain.Entities;
 using Domain.Interfaces;
 using Domain.Specifications;
@@ -13,6 +14,8 @@ namespace Application.Controllers
     [Route("api/[controller]")]
     public class ProductsController : Controller
     {
+        private readonly IMapper _mapper;
+
         public IGenericRepository<Product> _productRepo { get; }
         public IGenericRepository<ProductBrand> _productBrandRepo { get; }
         public IGenericRepository<ProductType> _productTypeRepo { get; }
@@ -20,11 +23,13 @@ namespace Application.Controllers
         public ProductsController(
             IGenericRepository<Product> productRepo,
             IGenericRepository<ProductBrand> productBrandRepo,
-            IGenericRepository<ProductType> productTypeRepo)
+            IGenericRepository<ProductType> productTypeRepo,
+            IMapper mapper)
         {
             _productRepo = productRepo;
             _productBrandRepo = productBrandRepo;
             _productTypeRepo = productTypeRepo;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -59,17 +64,8 @@ namespace Application.Controllers
             try
             {
                 var spec = new ProductsWithTypesAndBrandsSpecification(id);
-                var products = await _productRepo.GetEntityWithSpec(spec);
-                ProductToReturnDto productToReturnDto = new ProductToReturnDto
-                {
-                    Id = products.Id,
-                    Name = products.Name,
-                    Description = products.Description,
-                    PictureUrl = products.PictureUrl,
-                    Price = products.Price,
-                    ProductBrand = products.ProductBrand.Name,
-                    ProductType = products.ProductType.Name
-                };
+                var product = await _productRepo.GetEntityWithSpec(spec);
+                var productToReturnDto = _mapper.Map<Product, ProductToReturnDto>(product);
                 return Ok(productToReturnDto);
             }
             catch (Exception ex)
