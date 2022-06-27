@@ -10,9 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Application.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class ProductsController : Controller
+    public class ProductsController : BaseApiController
     {
         private readonly IMapper _mapper;
 
