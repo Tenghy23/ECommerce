@@ -12,5 +12,7 @@ namespace Domain.ISpecifications
         // Expression takes a Func, which takes a type and returns a boolean value
         Expression<Func<T, bool>> Criteria { get;  }
         List<Expression<Func<T, object>>> Includes { get;  }
+        Expression<Func<T, object>> OrderBy { get; }
+        Expression<Func<T, object>> OrderByDescending { get; }
     }
 }
