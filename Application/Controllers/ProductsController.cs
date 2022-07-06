@@ -16,7 +16,7 @@ namespace Application.Controllers
     {
         private readonly IMapper _mapper;
 
-        public IGenericRepository<Product> _productRepo { get; }
+        public IGenericRepository<Product> _productsRepo { get; }
         public IGenericRepository<ProductBrand> _productBrandRepo { get; }
         public IGenericRepository<ProductType> _productTypeRepo { get; }
 
@@ -26,7 +26,7 @@ namespace Application.Controllers
             IGenericRepository<ProductType> productTypeRepo,
             IMapper mapper)
         {
-            _productRepo = productRepo;
+            _productsRepo = productRepo;
             _productBrandRepo = productBrandRepo;
             _productTypeRepo = productTypeRepo;
             _mapper = mapper;
@@ -39,11 +39,14 @@ namespace Application.Controllers
             try
             {
                 var spec = new ProductsWithTypesAndBrandsSpecification(productParams);
-                var products = await _productRepo.ListAsync(spec);
-
-                var mappedProducts = _mapper
+                var countSpec = new ProductWithFiltersForCountSpecification(productParams);
+                var totalItems = await _productsRepo.CountAsync(countSpec);
+                var products = await _productsRepo.ListAsync(spec);
+                var data = _mapper
                     .Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(products);
-                return Ok(mappedProducts);
+
+                return Ok(new Pagination<ProductToReturnDto>(productParams.PageIndex,
+                    productParams.PageSize, totalItems, data));
             }
             catch (Exception ex)
             {
@@ -60,7 +63,7 @@ namespace Application.Controllers
             try
             {
                 var spec = new ProductsWithTypesAndBrandsSpecification(id);
-                var product = await _productRepo.GetEntityWithSpec(spec);
+                var product = await _productsRepo.GetEntityWithSpec(spec);
 
                 if (product == null) return NotFound(new ApiResponse(404));
 

@@ -20,6 +20,7 @@ namespace Infrastructure
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
+            #region optional
             // if using Sqlite, convert decimal to double
             if (Database.ProviderName == "Microsoft.EntityFrameworkCore.Sqlite")
             {
@@ -35,6 +36,7 @@ namespace Infrastructure
                     }
                 }
             }
+            #endregion
         }
     }
 }

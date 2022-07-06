@@ -21,5 +21,15 @@ namespace Domain.Specifications
         public Guid? BrandId { get; set; }
         public Guid? TypeId { get; set; }
         public string? Sort { get; set; }
+
+        private string? _search;
+        public string? Search 
+        {
+            get => _search;
+            set => _search = value!.ToLower();
+        }
     }
 }
+
+/* ensures whenver search term comes into our api
+ * it will convert it to lowercase */
