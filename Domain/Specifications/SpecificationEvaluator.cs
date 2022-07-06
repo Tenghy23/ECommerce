@@ -31,6 +31,12 @@ namespace Domain.Specifications
                 query = query.OrderByDescending(spec.OrderByDescending);
             }
 
+            if (spec.IsPagingEnabled)
+            {
+                // paging must occur after Where and OrderBy
+                query = query.Skip(spec.Skip).Take(spec.Take);
+            }
+
             query = spec.Includes.Aggregate(query, (current, include) => current.Include(include));
 
             return query;

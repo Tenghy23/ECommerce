@@ -10,19 +10,20 @@ namespace Domain.Specifications
 {
     public class ProductsWithTypesAndBrandsSpecification : BaseSpecification<Product>
     {
-        public ProductsWithTypesAndBrandsSpecification(string? sort, Guid brandId, Guid typeId)
-            : base(x => 
-                ( string.IsNullOrEmpty(brandId.ToString()) || x.ProductBrandId == brandId) &&
-                (string.IsNullOrEmpty(typeId.ToString()) || x.ProductTypeId == typeId)
+        public ProductsWithTypesAndBrandsSpecification(ProductSpecParams productParams)
+            : base(x =>
+                (!productParams.BrandId.HasValue || x.ProductBrandId == productParams.BrandId) &&
+                (!productParams.TypeId.HasValue || x.ProductTypeId == productParams.TypeId)
             )
         {
             AddInclude(x => x.ProductType);
             AddInclude(x => x.ProductBrand);
             AddOrderBy(x => x.Name);
+            ApplyPaging(productParams.PageSize * (productParams.PageIndex-1), productParams.PageSize);
 
-            if (!string.IsNullOrEmpty(sort))
+            if (!string.IsNullOrEmpty(productParams.Sort))
             {
-                switch (sort)
+                switch (productParams.Sort)
                 {
                     case "priceAsc":
                         AddOrderBy(p => p.Price);
@@ -37,7 +38,8 @@ namespace Domain.Specifications
             }
         }
 
-        public ProductsWithTypesAndBrandsSpecification(Guid id) : base(x => x.Id == id)
+        public ProductsWithTypesAndBrandsSpecification(Guid id) 
+            : base(x => x.Id == id)
         {
             AddInclude(x => x.ProductType);
             AddInclude(x => x.ProductBrand);

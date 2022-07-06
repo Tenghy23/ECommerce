@@ -1,5 +1,6 @@
 ﻿using Application.DTOs;
 using Application.Errors;
+using Application.Helpers;
 using AutoMapper;
 using Domain.Entities;
 using Domain.Interfaces;
@@ -32,12 +33,12 @@ namespace Application.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyList<ProductToReturnDto>>> GetProducts(
-            string? sort, int? brandId, int? typeId)
+        public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetProducts(
+            [FromQuery]ProductSpecParams productParams)
         {
             try
             {
-                var spec = new ProductsWithTypesAndBrandsSpecification(sort, brandId, typeId);
+                var spec = new ProductsWithTypesAndBrandsSpecification(productParams);
                 var products = await _productRepo.ListAsync(spec);
 
                 var mappedProducts = _mapper
