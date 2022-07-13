@@ -2,19 +2,19 @@
   class="d-flex flex-column flex-md-row align-items-center justify-content-between p-3 px-md-4 border-bottom mb-3 bg-white border-bottom shadow-sm fixed-top"
 >
   <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-    <img src="../../../assets/images/logo.png" alt="logo" class="navbar__logo"/>
+    <img src="../../../../../../assets/images/logo.png" alt="logo" class="navbar__logo"/>
   </a>
   <nav class="my-2 my-md-0 mr-md-3 text-uppercase" style="font-size: larger;">
-    <a class="px-2 text-dark" href="#">Home</a>
-    <a class="px-2 text-dark" href="#">Shop</a>
-    <a class="px-2 text-dark" href="#">Contact</a>
+    <a class="px-2 text-dark" routerLink="/home" routerLinkActive="active">Home</a>
+    <a class="px-2 text-dark" routerLink="/shop" routerLinkActive="active">Shop</a>
+    <a class="px-2 text-dark" routerLink="/contact" routerLinkActive="active">Contact</a>
   </nav>
   <div class="d-flex align-items-center">
     <a class="position-relative">
       <i class="fa fa-shopping-cart fa-2x text-dark mx-5"></i>
       <div class="navbar__cart-no mx-5">5</div>
     </a>
-    <a class="btn btn-outline-primary mx-2" href="#">Login</a>
-    <a class="btn btn-outline-primary mx-3" href="#">Sign Up</a>
+    <a class="btn btn-outline-primary mx-2" routerLink="/login" routerLinkActive="active">Login</a>
+    <a class="btn btn-outline-primary mx-3" routerLink="/signup" routerLinkActive="active">Sign Up</a>
   </div>
 </div>
