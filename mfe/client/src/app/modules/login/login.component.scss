@@ -1,12 +1,12 @@
-.login-box {
+.login-container {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: auto;
-    width: 50%;
-    height: 250px;
+    width: 300px;
+    height: 300px;
 }
 
 .login-form div {
@@ -15,7 +15,13 @@
 
 .emailAddress-box {
     border: 1px solid lightgrey;
-    border-radius: 1px;
+    border-radius: 5px;
+    width: 250px;
+    padding: 5px;
+}
+
+.emailAddress-box::placeholder {
+    padding-left: 5px;
 }
 
 .emailAddress-box:focus {
@@ -25,7 +31,9 @@
 
 .password-box {
     border: 1px solid lightgrey;
-    border-radius: 1px;
+    border-radius: 5px;
+    width: 250px;
+    padding: 5px;
 }
 
 .password-box:focus {
@@ -33,6 +41,9 @@
     border: 2px solid lightsalmon;
 }
 
+.password-box::placeholder {
+    padding-left: 5px;
+}
 
 .button-box {
     display: flex;
@@ -45,8 +56,4 @@
 
 .error-text {
     color: red;
-}
-
-.submit-button {
-    margin-right: 10px;
 }

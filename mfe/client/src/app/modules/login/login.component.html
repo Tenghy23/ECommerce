@@ -1,23 +1,40 @@
-<div class="login-box">
-    <h2 style="margin-bottom: 20px;">Login Page</h2>
-    <form [formGroup]="loginForm" class="login-form">
-        <div class="emailAddress-outline">
-            <input class="emailAddress-box" type="text" id="emailAddress" placeholder="email address" formControlName="emailAddress">
-            <div class="error-text" *ngIf="emailAddress.errors?.['required'] && (loginForm.touched || loginForm.dirty)">Please input email address</div>
-        </div>
-        <div class="password-outline">
-            <input class="password-box" type="password" id="password" placeholder="password" formControlName="password">
-            <div class="error-text" *ngIf="password.errors?.['required'] && (loginForm.touched || loginForm.dirty)">Please input password</div>
-        </div>
-        <div class="button-box">
-            <common-button inputType="submit" buttonName="Submit" (buttonClicked)="submitForm()"></common-button>
-            <common-button inputType="reset" buttonName="Clear" (buttonClicked)="clearForm()"></common-button>
-        </div>
-    </form>
+<div class="login-container">
+  <h2 style="margin-bottom: 20px">Login Page</h2>
+  <form [formGroup]="loginForm" class="login-form">
+    <div class="emailAddress-outline">
+      <common-input inputType="text" inputId="emailAddress" inputPlaceHolder="email address" formControlName="emailAddress" [formValue]="emailAddress.value"></common-input>
+      <div
+        class="error-text"
+        *ngIf="emailAddress.errors?.['required'] && (loginForm.touched || loginForm.dirty)"
+      >
+        Please input email address
+      </div>
+    </div>
+    <div class="password-outline">
+      <common-input inputType="password" inputId="password" inputPlaceHolder="password" formControlName="password" [formValue]="password.value"></common-input>
+      <div
+        class="error-text"
+        *ngIf="password.errors?.['required'] && (loginForm.touched || loginForm.dirty)"
+      >
+        Please input password
+      </div>
+    </div>
+    <div class="button-box">
+      <common-button
+        inputType="submit"
+        buttonName="Submit"
+        (buttonClicked)="submitForm()"
+      ></common-button>
+      <common-button
+        inputType="reset"
+        buttonName="Clear"
+        (buttonClicked)="clearForm()"
+      ></common-button>
+    </div>
+  </form>
 </div>
 
-
-        <!-- to check for form value 
-             <div> 
-            {{ loginForm.value | json }}
-        </div> --> 
+<!-- to check for form value -->
+<!-- <div>
+  {{ loginForm.value | json }}
+</div> -->

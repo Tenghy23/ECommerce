@@ -1,0 +1,10 @@
+<input
+  [type]="inputType"
+  [id]="inputId"
+  class="input-box"
+  (input)="onChange($any($event.target).value)"
+  (blur)="onTouched()"
+  [placeholder]="inputPlaceHolder"
+  [(ngModel)]="formValue"
+  #input
+/>

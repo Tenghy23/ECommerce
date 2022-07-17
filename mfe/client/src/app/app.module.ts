@@ -13,7 +13,8 @@ import { LoginComponent } from './modules/login/login.component';
 import { SignUpComponent } from './modules/sign-up/sign-up.component';
 import { HomeComponent } from './modules/home/home.component';
 import { CommonButtonComponent } from './components/common-button/common-button.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonInputComponent } from './components/common-input/common-input.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +25,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     SignUpComponent,
     HomeComponent,
-    CommonButtonComponent
+    CommonButtonComponent,
+    CommonInputComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
     ReactiveFormsModule,
     StoreModule.forRoot({})
   ],

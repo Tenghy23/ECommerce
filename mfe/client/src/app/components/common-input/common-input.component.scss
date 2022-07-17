@@ -1,0 +1,15 @@
+.input-box::placeholder {
+    padding-left: 5px;
+}
+
+.input-box:focus {
+    outline: 0;
+    border: 2px solid lightsalmon;
+}
+
+.input-box {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    width: 250px;
+    padding: 5px;
+}
