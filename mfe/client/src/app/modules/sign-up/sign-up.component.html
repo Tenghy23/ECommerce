@@ -9,7 +9,7 @@
     ></common-input>
     <div
       class="error-text"
-      *ngIf="emailAddress.errors?.['required'] && (signup.touched || signup.dirty)"
+      *ngIf="username.errors?.['required'] && (signup.touched || signup.dirty)"
     >
       Please input username
     </div>
@@ -21,7 +21,7 @@
     ></common-input>
     <div
       class="error-text"
-      *ngIf="emailAddress.errors?.['required'] && (signup.touched || signup.dirty)"
+      *ngIf="password.errors?.['required'] && (signup.touched || signup.dirty)"
     >
       Please input password
     </div>
@@ -45,7 +45,7 @@
     ></common-input>
     <div
       class="error-text"
-      *ngIf="emailAddress.errors?.['required'] && (signup.touched || signup.dirty)"
+      *ngIf="dob.errors?.['required'] && (signup.touched || signup.dirty)"
     >
       Please input date of birth
     </div>
