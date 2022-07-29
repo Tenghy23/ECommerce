@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/models/product';
+import { ShopSandBox } from 'src/app/store/sandbox/shop.sandbox';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  product: Product;
+  
+  constructor(private shopSandBox: ShopSandBox) { }
 
   ngOnInit(): void {
+    this.shopSandBox.getProductBrand();
   }
-
 }

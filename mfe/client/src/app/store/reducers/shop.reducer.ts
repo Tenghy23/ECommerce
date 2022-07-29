@@ -1,15 +1,27 @@
-import { Action } from "@ngrx/store";
+import { ProductBrand } from "src/app/models/product-brand";
+import { ShopAction } from "../actions/shop.actions";
 
-const initialState = {
-    mockDate: undefined
+// not from course
+export interface State {
+    productBrands: ProductBrand;
+}
+
+// not from course
+export const initialState: State = {
+    productBrands: undefined
 };
 
-export function shopReducer(state = initialState, action: Action) {
+
+// not from course
+export function reducer(state: State = initialState, action: ShopAction): State {
     switch (action.type) {
-        case 'ADD_INGREDIENT':    
+        case '[Shop] PRODUCT_BRANDS':    
             return {
-                ...state,
-                mockDate: '123'
+                ...initialState,
+                productBrands: action.payload
             }; 
     }
 }
+
+
+export const getProductBrand = (state: State) => state.productBrands;

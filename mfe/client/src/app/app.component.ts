@@ -1,6 +1,4 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { IProduct } from './models/product';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +6,9 @@ import { IProduct } from './models/product';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'Skinet';
-  products: IProduct[];
-
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 }
   

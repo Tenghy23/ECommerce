@@ -15,6 +15,8 @@ import { HomeComponent } from './modules/home/home.component';
 import { CommonButtonComponent } from './components/common-button/common-button.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonInputComponent } from './components/common-input/common-input.component';
+import { EffectsModule } from '@ngrx/effects';
+import { ShopEffects } from './store/effects/shop.effects';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { CommonInputComponent } from './components/common-input/common-input.com
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    EffectsModule.forRoot([ShopEffects]),
     StoreModule.forRoot({})
   ],
   providers: [],
