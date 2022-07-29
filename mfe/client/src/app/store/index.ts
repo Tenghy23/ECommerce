@@ -17,7 +17,7 @@ export const reducers: ActionReducerMap<State> = {
   shopState: fromShopReducer.reducer,
 };
 
-export const getRootState = createFeatureSelector<State>('payment');
+export const getRootState = createFeatureSelector<State>('shop');
 
 export const getShopState = createSelector(getRootState, (state: State) => state.shopState);
 
