@@ -43,8 +43,12 @@
           <button class="btn btn-outline-success ml-2 my-2">Reset</button>
         </div>
       </div>
-      <div class="row">
-        <div class="col-4" *ngFor="let item of products">
+      <div class="d-flex flex-wrap">
+        <div
+          class="ml-2 mr-2"
+          style="width: 30%; height: 25%"
+          *ngFor="let item of products"
+        >
           <app-product-item [product]="item"></app-product-item>
         </div>
       </div>

@@ -8,10 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from './core/nav-bar/nav-bar.component';
 import { ShopModule } from './shop/shop.module';
 import { CoreModule } from './core/core.module';
-import { ProductItemComponent } from './product-item/product-item.component';
 
 @NgModule({
-  declarations: [AppComponent, NavBarComponent, ProductItemComponent],
+  declarations: [AppComponent, NavBarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
