@@ -46,7 +46,7 @@ namespace Application.Controllers
                     .Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(products);
 
                 return Ok(new Pagination<ProductToReturnDto>(productParams.PageIndex,
-                    productParams.PageSize, totalItems, data));
+                    productParams.PageSize, totalItems, data)); 
             }
             catch (Exception ex)
             {
