@@ -5,8 +5,8 @@ import { ProductItemComponent } from '../product-item/product-item.component';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [ShopComponent, ProductItemComponent],
-  imports: [CommonModule, SharedModule],
-  exports: [ShopComponent],
+    declarations: [ShopComponent, ProductItemComponent],
+    exports: [ShopComponent],
+    imports: [CommonModule, SharedModule]
 })
 export class ShopModule {}
