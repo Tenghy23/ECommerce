@@ -6,17 +6,18 @@
     class="pr-4"
     style="max-height: 70px"
     alt="logo"
+    routerLink="/"
   />
   <h5 class="my-0 mr-md-auto font-weight-normal">Angular ECommerce</h5>
   <nav class="my-2 my-md-0 mr-md-3" style="font-size: larger">
-    <a class="p-2 text-dark" href="#">Home</a>
-    <a class="p-2 text-dark" href="#">Shop</a>
-    <a class="p-2 text-dark" href="#">Support</a>
+    <a class="p-2" routerLink="/" routerLinkActive="active" href="#">Home</a>
+    <a class="p-2" routerLink="/shop" routerLinkActive="active" href="#">Shop</a>
+    <a class="p-2" routerLink="/contact" routerLinkActive="active" href="#">Support</a>
   </nav>
   <div class="d-flex align-item-center">
     <a class="position-relative">
       <i class="fa fa-shopping-cart fa-2x mr-5 text-dark"></i>
-      <div class="cart-no"></div>
+      <div class="cart-no">3</div>
     </a>
     <a class="btn btn-outline-primary mr-2" href="#">Login</a>
     <a class="btn btn-outline-primary mr-3" href="#">Sign up</a>
