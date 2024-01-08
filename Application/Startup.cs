@@ -1,14 +1,8 @@
-﻿using Application.Errors;
-using Application.Extensions;
+﻿using Application.Extensions;
 using Application.Helpers;
 using Application.Middleware;
-using Domain.Interfaces;
 using Infrastructure;
-using Infrastructure.Data;
-using Infrastructure.Repository;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
 
 namespace Application
 {
